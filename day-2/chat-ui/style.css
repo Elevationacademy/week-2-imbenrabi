@@ -1,0 +1,121 @@
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: 
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s m m m m m m m m"
+    "s s f f f f f f f f";
+    
+}
+#chat {
+    grid-area: m;
+    background-color: gray;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#chat .incoming div {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: left;
+    margin: 5px;
+}
+
+#chat .incoming div p{
+    background-color: lightgoldenrodyellow;
+    margin: 0;
+    min-width: 25px;
+    max-width: 250px;
+    padding: 5px;
+}
+
+#chat .outgoing div {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: right;
+    margin: 5px;
+}
+
+#chat .outgoing div p {
+    text-align: end;
+    background-color: lightskyblue;
+    margin: 0;
+    min-width: 25px;
+    max-width: 250px;
+    padding: 5px;
+}
+
+#side-bar {
+    grid-area: s;
+    background-color: darkslategray;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "p"
+    "l"
+    "l"
+    "l"
+    "l";
+    
+}
+
+#side-bar p {
+    display: grid;
+    grid-area: p;
+    align-content: flex-start;
+    padding: 5px;
+}
+
+#friends-list {
+    display: grid;
+    grid-area: l;
+    grid-template-rows: repeat(4, 1fr);
+    align-content: end;
+    
+}
+
+.friend {
+    display: grid;
+    height: 75px;
+    align-content: flex-start;
+    padding: 5px;
+    
+}
+
+#message {
+    grid-area: f;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "i i i i b";
+}
+
+#type-msg {
+    grid-area: i;
+}
+
+#send-btn {
+    grid-area: b;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background-color: #333744;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.time {
+    font-size: 10px;
+}
+
+
